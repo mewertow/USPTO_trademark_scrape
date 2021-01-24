@@ -1,27 +1,17 @@
-# PythonMetaCriticScraper
-Simple BeautifulSoup scraper to pull out Goods & Services data from a simple USPTO search. 
-[Markdown tips](https://www.markdownguide.org/basic-syntax).
+# Python USPTO Trademark Scraper
+Simple scraper using selenium to run a trademark clearance search on the USPTO website. Pulls out Goods & Services data, serial numbers, and word marks for all entries, then saves in a .csv file.  
 
 ## Dependencies 
-- [BeautifulSoup](https://pypi.org/project/beautifulsoup4/) - `pip install beautifulsoup4`
-- [Numpy](https://pypi.org/project/numpy/) - `pip install numpy`
+- [Numpy](https://pypi.org/project/numpy/) - `pip install numpy
+- [Pandas] (https://pandas.pydata.org/) - `pip install pandas
+- [Selenium] (https://www.selenium.dev/) - `pip install selenium
 - python 3.8 req'd
 
-
-# Goal
-1. Start at the search page for live entries of Nova (http://tmsearch.uspto.gov/bin/showfield?f=toc&state=4807%3Aua2i6e.3.1)
-2. Crawl through each entry (50 per page, 1392 pages) and click the hyperlink to go to the trademark page. Record the serial number. 
-    1. In the trademark page, under the goods & services entry, pull all text starting from "G & S:" UP TO the first period "." - semicolons separate G&S entries. Store in column next to serial number.  
-3. When reach entry #50, go to next page and repeat. Simply add 50 to the index at end of the http address. If index > 1351, stop.    
-
 ## Flow 
-1. Run the file as main:  `python uspto_tm_scrape.py`
-2. Enter your game title. _Note: Any title must match exactly with a metacritic entry, it's basic search functionality._
-3. Enter your console options as space-separated entries, or simply hit return to search all consoles in the list. 
-4. Receive data with your eyes
+1. Run the file from terminal:  `python uspto_tm_scrape.py`
+2. Enter your search term. _Note: Can't be empty._ 
+4. Sit back and relax
 
-
-
-http://tmsearch.uspto.gov/bin/showfield?f=toc&state=4807%3Aua2i6e.3.51
-http://tmsearch.uspto.gov/bin/showfield?f=toc&state=4807%3Aua2i6e.3.101
-http://tmsearch.uspto.gov/bin/showfield?f=toc&state=4807%3Aua2i6e.3.1351
+# TODO: Improvements
+1. Iterate over data table only once, pulling out data as you go, for significant speed improvement. 
+2. Append an existing .csv file rather than dump all data from pandas dataframe at the end - in case the browser window closes, all data is lost. 
