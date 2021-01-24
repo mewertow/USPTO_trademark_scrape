@@ -133,7 +133,8 @@ def pull_Data(driver):
     match = ['Word Mark', 'Goods and Services', 'Serial Number']
     for i in match:
         text = findTextInTable(i, driver)
-        print(text)
+        if debug:
+            print(text)
         data_row.append(text)
 
     return data_row

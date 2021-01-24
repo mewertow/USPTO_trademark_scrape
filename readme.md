@@ -1,10 +1,14 @@
 # Python USPTO Trademark Scraper
 Simple scraper using selenium to run a trademark clearance search on the USPTO website. Pulls out Goods & Services data, serial numbers, and word marks for all entries, then saves in a .csv file.  
 
-## Dependencies 
-- [Numpy](https://pypi.org/project/numpy/) - `pip install numpy
-- [Pandas] (https://pandas.pydata.org/) - `pip install pandas
-- [Selenium] (https://www.selenium.dev/) - `pip install selenium
+## Install Dependencies:
+- pip install -r requirements.txt
+
+### Dependencies 
+- [Numpy](https://pypi.org/project/numpy/) 
+- [Pandas](https://pandas.pydata.org/) 
+- [Selenium](https://www.selenium.dev/) 
+- [Requests](https://requests.readthedocs.io/en/master/) 
 - python 3.8 req'd
 
 ## Flow 
