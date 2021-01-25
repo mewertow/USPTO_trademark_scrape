@@ -23,3 +23,4 @@ Only tested on windows 10 (version 10.0.18363)
 # TODO: Improvements
 1. Iterate over data table only once, pulling out data as you go, for significant speed improvement. 
 2. Append an existing .csv file rather than dump all data from pandas dataframe at the end - in case the browser window closes, all data is lost. 
+3. Add a list of filter terms for the G&S text to pull out relevant entries - e.g., 'media' or 'video games' 
