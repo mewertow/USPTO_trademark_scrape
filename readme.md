@@ -9,7 +9,7 @@ Simple scraper using selenium to run a trademark clearance search on the USPTO w
 - [Pandas](https://pandas.pydata.org/) 
 - [Selenium](https://www.selenium.dev/)
 - [Requests](https://requests.readthedocs.io/en/master/)
-- You must download the appropriate selenium chrome webdriver - (incl. is chrome 87). You can find [chrome webdrivers here]https://chromedriver.chromium.org/downloads.
+- You must download the appropriate selenium chrome webdriver - (incl. is chrome 87). You can find [chrome webdrivers here](https://chromedriver.chromium.org/downloads).
 - [Python 3.8](https://www.python.org/downloads/release/python-380/)
 
 ## Flow 
